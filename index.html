@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stephanie Love Experience</title>
+    <meta
+      name="description"
+      content="A romantic interactive experience created especially for Stephanie."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient-glow ambient-glow-one"></div>
+    <div class="ambient-glow ambient-glow-two"></div>
+
+    <!-- Opening experience -->
+    <section class="opening-screen" id="openingScreen">
+      <div class="opening-content">
+        <p class="eyebrow">For the one who makes every moment feel golden</p>
+        <h1>Stephanie ❤️</h1>
+        <p class="intro-message">
+          Some people don’t just brighten a room; they make the whole world feel softer,
+          warmer, and more beautiful. This moment is for you.
+        </p>
+        <button class="primary-btn" id="enterButton">Enter the moment</button>
+      </div>
+      <div class="floating-hearts" id="floatingHearts"></div>
+    </section>
+
+    <main class="experience" id="experience">
+      <div class="floating-hearts floating-hearts-secondary" id="floatingHeartsSecondary"></div>
+      <section class="card hero-card">
+        <div class="section-heading">
+          <p class="section-label">A beautiful soundtrack</p>
+          <h2>Let the music speak softly</h2>
+        </div>
+
+        <div class="player-shell">
+          <div class="player-cover">
+            <span>♡</span>
+          </div>
+
+          <div class="player-controls">
+            <div class="player-buttons">
+              <button class="icon-btn" id="playBtn" aria-label="Play audio">▶</button>
+              <button class="icon-btn" id="pauseBtn" aria-label="Pause audio">❚❚</button>
+            </div>
+
+            <div class="timeline-wrap">
+              <input type="range" id="progress" min="0" max="100" value="0" />
+              <div class="time-row">
+                <span id="currentTime">00:00</span>
+                <span id="duration">00:00</span>
+              </div>
+            </div>
+
+            <div class="volume-wrap">
+              <label for="volume">Volume</label>
+              <input type="range" id="volume" min="0" max="1" step="0.1" value="0.7" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card caption-card">
+        <div class="section-heading">
+          <p class="section-label">Gentle words in time</p>
+          <h2>Moments that arrive like whispers</h2>
+        </div>
+
+        <div class="caption-display" id="captionDisplay">
+          <p class="caption-placeholder">The music will guide beautiful words to appear here.</p>
+        </div>
+      </section>
+
+      <section class="card memory-card-section">
+        <div class="section-heading">
+          <p class="section-label">Treasured memories</p>
+          <h2>Little pieces of a love story</h2>
+        </div>
+
+        <div class="memory-grid">
+          <article class="memory-card">
+            <img src="assets/images/me.jpeg" alt="A beautiful memory with Stephanie" loading="lazy" />
+            <h3>My favorite view</h3>
+            <p>A little piece of my heart captured in this moment.</p>
+          </article>
+          <article class="memory-card">
+            <img src="assets/images/stephanie.jpeg" alt="Stephanie" loading="lazy" />
+            <h3>Stephanie</h3>
+            <p>The name that makes every moment feel warmer and more meaningful.</p>
+          </article>
+          <article class="memory-card">
+            <img src="assets/images/our-moment.jpeg" alt="A cherished memory together" loading="lazy" />
+            <h3>Us</h3>
+            <p>One of the memories that will always stay close to my heart.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-section" id="finalSection">
+        <div class="final-glow"></div>
+        <div class="final-content">
+          <p class="section-label">For Stephanie</p>
+          <h2>Stephanie ❤️</h2>
+          <p class="final-message">
+            Some moments in life remind us of what truly matters. Some people make ordinary
+            days feel unforgettable.
+          </p>
+          <p class="final-question">
+            If the whole world became silent and all that mattered was one final moment, would
+            you choose to spend that moment with me?
+          </p>
+          <a class="primary-btn whatsapp-btn" id="whatsappButton" href="#">Send My Answer ❤️</a>
+        </div>
+      </section>
+    </main>
+
+    <audio id="song" preload="metadata">
+      <source src="assets/song.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
