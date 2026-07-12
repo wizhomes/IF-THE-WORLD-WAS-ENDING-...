@@ -24,6 +24,7 @@ const captions = [
 
 let shownCaptions = new Set();
 let typingTimer = null;
+let currentCoverVideo = 'stephanie';
 
 function formatTime(seconds) {
   const mins = Math.floor(seconds / 60);
@@ -73,14 +74,15 @@ function handleCaptions() {
   });
 }
 
-function updateCoverVideo() {
-  const current = song.currentTime || 0;
+function switchCoverVideo() {
+  const nextSource = currentCoverVideo === 'stephanie'
+    ? 'WhatsApp Video 2026-07-12 at 12.32.44 AM.mp4'
+    : 'video of stephanie.mp4';
 
-  if (current >= 35 && coverVideo.currentSrc !== window.location.href + 'WhatsApp%20Video%202026-07-12%20at%2012.32.44%20AM.mp4') {
-    coverVideo.src = 'WhatsApp Video 2026-07-12 at 12.32.44 AM.mp4';
-    coverVideo.load();
-    coverVideo.play().catch(() => {});
-  }
+  currentCoverVideo = currentCoverVideo === 'stephanie' ? 'mine' : 'stephanie';
+  coverVideo.src = nextSource;
+  coverVideo.load();
+  coverVideo.play().catch(() => {});
 }
 
 function createFloatingHearts(container, count = 18) {
@@ -115,19 +117,22 @@ progress.addEventListener('input', () => {
   updatePlayerUI();
 });
 
+coverVideo.addEventListener('ended', switchCoverVideo);
+
 song.addEventListener('loadedmetadata', updatePlayerUI);
 song.addEventListener('timeupdate', () => {
   updatePlayerUI();
   handleCaptions();
-  updateCoverVideo();
 });
 song.addEventListener('play', () => {
   playBtn.style.opacity = '0.55';
   pauseBtn.style.opacity = '1';
+  coverVideo.play().catch(() => {});
 });
 song.addEventListener('pause', () => {
   playBtn.style.opacity = '1';
   pauseBtn.style.opacity = '0.55';
+  coverVideo.pause();
 });
 song.addEventListener('ended', () => {
   document.body.classList.add('final-active');
