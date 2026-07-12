@@ -13,7 +13,6 @@ const finalSection = document.getElementById('finalSection');
 const whatsappButton = document.getElementById('whatsappButton');
 const floatingHearts = document.getElementById('floatingHearts');
 const floatingHeartsSecondary = document.getElementById('floatingHeartsSecondary');
-const toFinalButton = document.getElementById('toFinalButton');
 const musicPage = document.getElementById('musicPage');
 const finalPage = document.getElementById('finalPage');
 
@@ -160,10 +159,6 @@ enterButton.addEventListener('click', () => {
   document.body.classList.add('experience-started');
   showPage('musicPage');
   window.scrollTo({ top: 0, behavior: 'auto' });
-});
-
-toFinalButton.addEventListener('click', () => {
-  showPage('finalPage');
 });
 
 whatsappButton.addEventListener('click', () => {
