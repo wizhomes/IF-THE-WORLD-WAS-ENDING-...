@@ -7,6 +7,7 @@ const currentTimeEl = document.getElementById('currentTime');
 const durationEl = document.getElementById('duration');
 const captionDisplay = document.getElementById('captionDisplay');
 const enterButton = document.getElementById('enterButton');
+const coverVideo = document.getElementById('coverVideo');
 const experience = document.getElementById('experience');
 const finalSection = document.getElementById('finalSection');
 const whatsappButton = document.getElementById('whatsappButton');
@@ -72,6 +73,16 @@ function handleCaptions() {
   });
 }
 
+function updateCoverVideo() {
+  const current = song.currentTime || 0;
+
+  if (current >= 35 && coverVideo.currentSrc !== window.location.href + 'WhatsApp%20Video%202026-07-12%20at%2012.32.44%20AM.mp4') {
+    coverVideo.src = 'WhatsApp Video 2026-07-12 at 12.32.44 AM.mp4';
+    coverVideo.load();
+    coverVideo.play().catch(() => {});
+  }
+}
+
 function createFloatingHearts(container, count = 18) {
   for (let i = 0; i < count; i += 1) {
     const heart = document.createElement('span');
@@ -108,6 +119,7 @@ song.addEventListener('loadedmetadata', updatePlayerUI);
 song.addEventListener('timeupdate', () => {
   updatePlayerUI();
   handleCaptions();
+  updateCoverVideo();
 });
 song.addEventListener('play', () => {
   playBtn.style.opacity = '0.55';
