@@ -15,11 +15,11 @@ const floatingHearts = document.getElementById('floatingHearts');
 const floatingHeartsSecondary = document.getElementById('floatingHeartsSecondary');
 
 const captions = [
-  { time: 8, text: 'A beautiful moment begins, and the world feels softer for a while.' },
-  { time: 18, text: 'Some people make quiet days feel unforgettable, just by being there.' },
-  { time: 32, text: 'Love has a way of turning quiet spaces into something sacred.' },
-  { time: 48, text: 'And every gentle memory becomes a treasure worth holding forever.' },
-  { time: 64, text: 'This is for the softness, the warmth, and the magic of being truly seen.' }
+  { time: 8, text: 'There are moments that quietly change the way we see everything.' },
+  { time: 18, text: 'And then you realize how deeply someone has become a part of your heart.' },
+  { time: 32, text: 'Love can survive distance, silence, and the long stretches between conversations.' },
+  { time: 48, text: 'It lives in the memory of your smile, the comfort of your voice, and the peace of being known.' },
+  { time: 64, text: 'And when the world feels uncertain, you still know who your heart would choose.' }
 ];
 
 let shownCaptions = new Set();
@@ -145,7 +145,7 @@ enterButton.addEventListener('click', () => {
 });
 
 whatsappButton.addEventListener('click', () => {
-  const message = 'Hi Baby❤️ I just experienced the special message you sent to me. My answer is…';
+  const message = 'Hi Eric ❤️\n\nI just finished the beautiful experience you created for me.\n\nEvery moment made me smile, reflect, and appreciate what we have.\n\nAnd now you asked me the question…\n\nHere\'s my answer…';
   const encoded = encodeURIComponent(message);
   whatsappButton.href = `https://wa.me/233509470007?text=${encoded}`;
 });
