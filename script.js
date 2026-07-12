@@ -145,9 +145,7 @@ enterButton.addEventListener('click', () => {
 });
 
 whatsappButton.addEventListener('click', () => {
-  const message = 'Hi Eric ❤️\n\nI just finished the beautiful experience you created for me.\n\nEvery moment made me smile, reflect, and appreciate what we have.\n\nAnd now you asked me the question…\n\nHere\'s my answer…';
-  const encoded = encodeURIComponent(message);
-  whatsappButton.href = `https://wa.me/233509470007?text=${encoded}`;
+  whatsappButton.href = 'https://wa.me/233509470007';
 });
 
 createFloatingHearts(floatingHearts, 18);
