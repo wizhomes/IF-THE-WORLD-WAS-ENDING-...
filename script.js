@@ -13,10 +13,8 @@ const finalSection = document.getElementById('finalSection');
 const whatsappButton = document.getElementById('whatsappButton');
 const floatingHearts = document.getElementById('floatingHearts');
 const floatingHeartsSecondary = document.getElementById('floatingHeartsSecondary');
-const toCaptionButton = document.getElementById('toCaptionButton');
 const toFinalButton = document.getElementById('toFinalButton');
 const musicPage = document.getElementById('musicPage');
-const captionPage = document.getElementById('captionPage');
 const finalPage = document.getElementById('finalPage');
 
 const captions = [
@@ -104,7 +102,7 @@ function createFloatingHearts(container, count = 18) {
 }
 
 function showPage(pageId) {
-  const pages = [musicPage, captionPage, finalPage];
+  const pages = [musicPage, finalPage];
   pages.forEach((page) => page.classList.remove('active'));
   const targetPage = document.getElementById(pageId);
   if (targetPage) {
@@ -162,10 +160,6 @@ enterButton.addEventListener('click', () => {
   document.body.classList.add('experience-started');
   showPage('musicPage');
   window.scrollTo({ top: 0, behavior: 'auto' });
-});
-
-toCaptionButton.addEventListener('click', () => {
-  showPage('captionPage');
 });
 
 toFinalButton.addEventListener('click', () => {
