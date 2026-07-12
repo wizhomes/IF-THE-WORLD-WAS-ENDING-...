@@ -5,7 +5,6 @@ const pauseBtn = document.getElementById('pauseBtn');
 const progress = document.getElementById('progress');
 const currentTimeEl = document.getElementById('currentTime');
 const durationEl = document.getElementById('duration');
-const volumeEl = document.getElementById('volume');
 const captionDisplay = document.getElementById('captionDisplay');
 const enterButton = document.getElementById('enterButton');
 const experience = document.getElementById('experience');
@@ -103,10 +102,6 @@ progress.addEventListener('input', () => {
   const newTime = (Number(progress.value) / 100) * song.duration;
   song.currentTime = newTime;
   updatePlayerUI();
-});
-
-volumeEl.addEventListener('input', () => {
-  song.volume = Number(volumeEl.value);
 });
 
 song.addEventListener('loadedmetadata', updatePlayerUI);
