@@ -24,7 +24,13 @@ const captions = [
 
 let shownCaptions = new Set();
 let typingTimer = null;
-let currentCoverVideo = 'stephanie';
+let coverVideoIndex = 0;
+const coverVideoSources = [
+  'video of stephanie1.mp4',
+  'video of myself 1.mp4',
+  'video of stephanie 2.mp4',
+  'video of myself 2.mp4'
+];
 
 function formatTime(seconds) {
   const mins = Math.floor(seconds / 60);
@@ -75,12 +81,8 @@ function handleCaptions() {
 }
 
 function switchCoverVideo() {
-  const nextSource = currentCoverVideo === 'stephanie'
-    ? 'WhatsApp Video 2026-07-12 at 12.32.44 AM.mp4'
-    : 'video of stephanie.mp4';
-
-  currentCoverVideo = currentCoverVideo === 'stephanie' ? 'mine' : 'stephanie';
-  coverVideo.src = nextSource;
+  coverVideoIndex = (coverVideoIndex + 1) % coverVideoSources.length;
+  coverVideo.src = coverVideoSources[coverVideoIndex];
   coverVideo.load();
   coverVideo.play().catch(() => {});
 }
