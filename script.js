@@ -161,6 +161,7 @@ song.addEventListener('ended', () => {
 enterButton.addEventListener('click', () => {
   document.body.classList.add('experience-started');
   showPage('musicPage');
+  window.scrollTo({ top: 0, behavior: 'auto' });
 });
 
 toCaptionButton.addEventListener('click', () => {
