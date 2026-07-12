@@ -16,7 +16,7 @@ const floatingHeartsSecondary = document.getElementById('floatingHeartsSecondary
 
 const captions = [
   { time: 8, text: 'A beautiful moment begins, and the world feels softer for a while.' },
-  { time: 18, text: 'Some people make ordinary days feel unforgettable, just by being there.' },
+  { time: 18, text: 'Some people make quiet days feel unforgettable, just by being there.' },
   { time: 32, text: 'Love has a way of turning quiet spaces into something sacred.' },
   { time: 48, text: 'And every gentle memory becomes a treasure worth holding forever.' },
   { time: 64, text: 'This is for the softness, the warmth, and the magic of being truly seen.' }
