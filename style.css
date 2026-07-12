@@ -29,7 +29,8 @@ body {
     radial-gradient(circle at top, rgba(241, 201, 107, 0.16), transparent 28%),
     linear-gradient(135deg, #050505 0%, #12080d 50%, #040404 100%);
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body::before {
@@ -188,7 +189,7 @@ h2 {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.experience-pages {
+ .experience-pages {
   min-height: 100vh;
   display: none;
 }
@@ -203,6 +204,7 @@ body.experience-started .experience-pages {
   align-items: center;
   justify-content: center;
   padding: 1.25rem;
+  overflow-y: auto;
 }
 
 .page.active {
