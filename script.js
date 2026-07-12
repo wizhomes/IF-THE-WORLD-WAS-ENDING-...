@@ -128,7 +128,7 @@ enterButton.addEventListener('click', () => {
 });
 
 whatsappButton.addEventListener('click', () => {
-  const message = 'Hi ❤️ I just experienced the special message you created for me. My answer is…';
+  const message = 'Hi Baby ❤️ I just experienced the special message you made for me. My answer is…';
   const encoded = encodeURIComponent(message);
   whatsappButton.href = `https://wa.me/233509470007?text=${encoded}`;
 });
