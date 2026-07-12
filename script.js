@@ -8,11 +8,16 @@ const durationEl = document.getElementById('duration');
 const captionDisplay = document.getElementById('captionDisplay');
 const enterButton = document.getElementById('enterButton');
 const coverVideo = document.getElementById('coverVideo');
-const experience = document.getElementById('experience');
+const experiencePages = document.getElementById('experiencePages');
 const finalSection = document.getElementById('finalSection');
 const whatsappButton = document.getElementById('whatsappButton');
 const floatingHearts = document.getElementById('floatingHearts');
 const floatingHeartsSecondary = document.getElementById('floatingHeartsSecondary');
+const toCaptionButton = document.getElementById('toCaptionButton');
+const toFinalButton = document.getElementById('toFinalButton');
+const musicPage = document.getElementById('musicPage');
+const captionPage = document.getElementById('captionPage');
+const finalPage = document.getElementById('finalPage');
 
 const captions = [
   { time: 8, text: 'There are moments that quietly change the way we see everything.' },
@@ -98,6 +103,21 @@ function createFloatingHearts(container, count = 18) {
   }
 }
 
+function showPage(pageId) {
+  const pages = [musicPage, captionPage, finalPage];
+  pages.forEach((page) => page.classList.remove('active'));
+  const targetPage = document.getElementById(pageId);
+  if (targetPage) {
+    targetPage.classList.add('active');
+  }
+
+  if (pageId === 'finalPage') {
+    document.body.classList.add('final-active');
+  } else {
+    document.body.classList.remove('final-active');
+  }
+}
+
 playBtn.addEventListener('click', async () => {
   try {
     await song.play();
@@ -135,13 +155,20 @@ song.addEventListener('pause', () => {
   coverVideo.pause();
 });
 song.addEventListener('ended', () => {
-  document.body.classList.add('final-active');
-  finalSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  showPage('finalPage');
 });
 
 enterButton.addEventListener('click', () => {
   document.body.classList.add('experience-started');
-  experience.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  showPage('musicPage');
+});
+
+toCaptionButton.addEventListener('click', () => {
+  showPage('captionPage');
+});
+
+toFinalButton.addEventListener('click', () => {
+  showPage('finalPage');
 });
 
 whatsappButton.addEventListener('click', () => {

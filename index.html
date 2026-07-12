@@ -29,63 +29,79 @@
       <div class="floating-hearts" id="floatingHearts"></div>
     </section>
 
-    <main class="experience" id="experience">
+    <main class="experience-pages" id="experiencePages">
       <div class="floating-hearts floating-hearts-secondary" id="floatingHeartsSecondary"></div>
-      <section class="card hero-card">
-        <div class="section-heading">
-          <p class="section-label">A beautiful soundtrack</p>
-          <h2>Let the music speak gently</h2>
-        </div>
 
-        <div class="player-shell">
-          <div class="player-cover" id="playerCover">
-            <video id="coverVideo" autoplay muted playsinline preload="metadata" poster="assets/images/our-moment.jpeg">
-              <source src="video of stephanie1.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div class="player-controls">
-            <div class="player-buttons">
-              <button class="icon-btn" id="playBtn" aria-label="Play audio">▶</button>
-              <button class="icon-btn" id="pauseBtn" aria-label="Pause audio">❚❚</button>
+      <section class="page active" id="musicPage">
+        <div class="page-shell">
+          <section class="card hero-card">
+            <div class="section-heading">
+              <p class="section-label">A beautiful soundtrack</p>
+              <h2>Let the music speak gently</h2>
             </div>
 
-            <div class="timeline-wrap">
-              <input type="range" id="progress" min="0" max="100" value="0" />
-              <div class="time-row">
-                <span id="currentTime">00:00</span>
-                <span id="duration">00:00</span>
+            <div class="player-shell">
+              <div class="player-cover" id="playerCover">
+                <video id="coverVideo" autoplay muted playsinline preload="metadata" poster="assets/images/our-moment.jpeg">
+                  <source src="video of stephanie1.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="player-controls">
+                <div class="player-buttons">
+                  <button class="icon-btn" id="playBtn" aria-label="Play audio">▶</button>
+                  <button class="icon-btn" id="pauseBtn" aria-label="Pause audio">❚❚</button>
+                </div>
+
+                <div class="timeline-wrap">
+                  <input type="range" id="progress" min="0" max="100" value="0" />
+                  <div class="time-row">
+                    <span id="currentTime">00:00</span>
+                    <span id="duration">00:00</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-          </div>
+            <button class="primary-btn page-nav" id="toCaptionButton">Continue</button>
+          </section>
         </div>
       </section>
 
-      <section class="card caption-card">
-        <div class="section-heading">
-          <p class="section-label">Gentle words in time</p>
-          <h2>Words that arrive like a heartbeat</h2>
-        </div>
+      <section class="page" id="captionPage">
+        <div class="page-shell">
+          <section class="card caption-card">
+            <div class="section-heading">
+              <p class="section-label">Gentle words in time</p>
+              <h2>Words that arrive like a heartbeat</h2>
+            </div>
 
-        <div class="caption-display" id="captionDisplay">
-          <p class="caption-placeholder">The music will guide beautiful words to appear here.</p>
+            <div class="caption-display" id="captionDisplay">
+              <p class="caption-placeholder">The music will guide beautiful words to appear here.</p>
+            </div>
+
+            <button class="primary-btn page-nav" id="toFinalButton">Continue</button>
+          </section>
         </div>
       </section>
 
-      <section class="final-section" id="finalSection">
-        <div class="final-glow"></div>
-        <div class="final-content">
-          <p class="section-label">For the two of us</p>
-          <h2>Eric ❤️ Stephanie</h2>
-          <p class="final-message">
-            If life suddenly reminded us that tomorrow is never promised, I know exactly where I’d want to be.
-            I’d want to be wherever you are.
-          </p>
-          <p class="final-question">
-            If life became uncertain and all the noise around us faded away, would your heart still find its way back to mine?
-          </p>
-          <a class="primary-btn whatsapp-btn" id="whatsappButton" href="#">❤️ Tell Me Your Answer</a>
+      <section class="page final-page" id="finalPage">
+        <div class="page-shell">
+          <section class="final-section" id="finalSection">
+            <div class="final-glow"></div>
+            <div class="final-content">
+              <p class="section-label">For the two of us</p>
+              <h2>Eric ❤️ Stephanie</h2>
+              <p class="final-message">
+                If life suddenly reminded us that tomorrow is never promised, I know exactly where I’d want to be.
+                I’d want to be wherever you are.
+              </p>
+              <p class="final-question">
+                If life became uncertain and all the noise around us faded away, would your heart still find its way back to mine?
+              </p>
+              <a class="primary-btn whatsapp-btn" id="whatsappButton" href="#">❤️ Tell Me Your Answer</a>
+            </div>
+          </section>
         </div>
       </section>
     </main>
