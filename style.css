@@ -219,8 +219,8 @@ body.experience-started .experience {
 
 .player-cover {
   width: min(100%, 220px);
-  aspect-ratio: 4 / 5;
-  min-height: 160px;
+  aspect-ratio: 9 / 16;
+  min-height: 320px;
   border-radius: 1.2rem;
   display: grid;
   place-items: center;
