@@ -27,9 +27,7 @@ let typingTimer = null;
 let coverVideoIndex = 0;
 const coverVideoSources = [
   'video of stephanie1.mp4',
-  'video of myself 1.mp4',
-  'video of stephanie 2.mp4',
-  'video of myself 2.mp4'
+  'video of myself 1.mp4'
 ];
 
 function formatTime(seconds) {
